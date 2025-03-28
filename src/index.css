@@ -1,0 +1,490 @@
+/* Slick carousel styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #dedede;
+  color: #333;
+  overflow-y: auto; /* Ensure vertical scrolling works */
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #1e3c72 #f0f0f0; /* Scrollbar color for Firefox */
+}
+
+/* Custom Scrollbar for Body (Webkit Browsers) */
+body::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background of the scrollbar track */
+  border-radius: 5px; /* Rounded track corners */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #1e3c72; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Rounded scrollbar handle corners */
+  border: 2px solid #f0f0f0; /* Padding around the scrollbar handle */
+}
+
+body:hover::-webkit-scrollbar-thumb {
+  background-color: #2a5298; /* Darker color when hovered */
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  padding: 10px 20px;
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and title */
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+}
+
+.header-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Navigation Styles */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #ffd700; /* Highlight on hover */
+}
+
+/* Courses Page Styles */
+.courses-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.courses-page h2 {
+  font-size: 32px;
+  color: #1e3c72;
+  margin-bottom: 30px;
+}
+
+/* Filter Section */
+.filter-section {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Keep the filter above other elements */
+}
+
+.filter-section label {
+  font-size: 16px;
+  margin-right: 10px;
+  color: #1e3c72;
+}
+
+.filter-section select {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 200px;
+  background-color: #ffffff;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-section select:hover,
+.filter-section select:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+  outline: none;
+}
+
+/* Course List */
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Space between cards */
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Course Card */
+.course-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h3 {
+  font-size: 20px;
+  color: #1e3c72;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Institutions Section */
+.institutions-section {
+  padding: 40px 20px;
+  background-color: #dedede;
+}
+
+.institutions-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #1e3c72;
+  margin-bottom: 30px;
+}
+
+.institutions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.institutions-list li {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 20px;
+  position: relative;
+}
+
+.institutions-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #1e3c72;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-section h2 {
+  color: #1e3c72;
+  margin-bottom: 20px;
+}
+
+.contact-card {
+  /* border-radius: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+} */
+
+.contact-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Slider Section */
+.slider-section {
+  margin: 20px auto;
+  max-width: 800px;
+  width: 90%;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .course-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .course-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Courses Section */
+.courses-section {
+  padding: 40px 20px;
+  background-color: #dedede; /* Matches the contact-section background */
+  text-align: center; /* Aligns text to the center */
+  margin-top: 30px; /* Adds space above the section */
+}
+
+.courses-section h2 {
+  color: #1e3c72; /* Consistent color with the heading */
+  margin-bottom: 20px; /* Adds spacing below the heading */
+  font-size: 28px; /* Adjust font size for the heading */
+  font-weight: bold; /* Makes the heading bold */
+}
+
+.course-cards {
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center the cards */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px; /* Limit width of the card container */
+  margin: 0 auto; /* Center the container */
+}
+
+.course-card {
+  background: #ffffff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Inner padding for the content */
+  width: 300px; /* Fixed width for the cards */
+  text-align: center; /* Align text inside the cards to the left */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.course-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.course-card p {
+  font-size: 16px; /* Standard text size */
+  color: #555; /* Gray text color */
+  margin: 0; /* Remove extra margins */
+}
+
+/* Custom Scrollbar for Select Dropdown */
+.filter-section select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 250px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #1e3c72 #f0f0f0; /* Scrollbar color for Firefox */
+}
+
+/* Webkit Scrollbar (for Chrome, Edge, and Safari) */
+.filter-section select::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.filter-section select::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background of the scrollbar track */
+  border-radius: 5px; /* Rounded track corners */
+}
+
+.filter-section select::-webkit-scrollbar-thumb {
+  background-color: #1e3c72; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Rounded scrollbar handle corners */
+  border: 2px solid #f0f0f0; /* Padding around the scrollbar handle */
+}
+
+.filter-section select:hover,
+.filter-section select:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+  outline: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .filter-section select {
+    font-size: 14px; /* Smaller font size for smaller screens */
+    min-width: 150px; /* Reduce minimum width */
+    max-width: 250px; /* Reduce maximum width */
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-section select {
+    font-size: 12px; /* Smaller font size for mobile screens */
+    min-width: 120px; /* Reduce minimum width further */
+    padding: 8px 10px; /* Reduce padding for compact appearance */
+  }
+}
+/* About Section */
+.about-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center; /* centre-align the text */
+  margin-bottom: 30px;
+}
+
+.about-section h2 {
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.about-section p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.mission-section h2 {
+  color: #1e3c72;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.mission-section p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Vision Section */
+.vision-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.vision-section h2 {
+  color: #1e3c72;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.vision-section p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background: #1e3c72;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+
+/* connect form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  form {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
