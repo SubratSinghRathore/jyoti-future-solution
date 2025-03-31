@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/Jyoti_Future_Solutions_Logo.png';
 
 const Header = () => {
@@ -11,8 +11,8 @@ const Header = () => {
       </div>
       <nav className="header-nav">
         <ul className="nav-menu">
-          <li className="nav-item"><Link to="/">Home</Link></li>
-          <li className="nav-item"><Link to="/courses">Course Details</Link></li>
+          <li className="nav-item"><NavLink to="/" className={({isActive})=>isActive?'active':'notactive'}>Home</NavLink></li>
+          <li className="nav-item"><NavLink to="/courses" className={({isActive})=>isActive?'active':'notactive'}>Course Details</NavLink></li>
         </ul>
       </nav>
     </header>

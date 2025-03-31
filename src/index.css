@@ -5,6 +5,7 @@
 
 /* General Styles */
 body {
+  position: relative;
   font-family: 'Arial', sans-serif;
   text-align: center;
   margin: 0;
@@ -39,6 +40,9 @@ body:hover::-webkit-scrollbar-thumb {
 
 /* Header Styles */
 .header {
+  width: 97vw;
+  z-index: 100;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -488,3 +492,6 @@ span {
   }
 }
 
+.active{
+  color: #ffd700 !important
+}
