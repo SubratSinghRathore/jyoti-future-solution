@@ -137,7 +137,7 @@ const CoursesPage = () => {
       description: 'A skill-based training program for various technical trades.',
       duration: '6 months - 2 years',
       eligibility: '10th or 12th pass',
-    },
+    }
   ];
 
  const sortedCourses = [...courseDetails].sort((a, b) => a.title.localeCompare(b.title));
